@@ -7,14 +7,12 @@ type FoodParam = {
 //   handlePress: () => void; // ✅ This should be a function, not a string
 };
 
-const FoodTab: React.FC<FoodParam> = ({ name, 
+const FoodTab: React.FC<FoodParam> = ({ name, color
     // handlePress 
 }) => {
   return (
-    <TouchableOpacity 
-    // onPress={handlePress}
-    >
-      <Text style={{ color:? color : 'black', fontSize: 13, textDecorationLine: 'underline', margin: 10 }}>
+    <TouchableOpacity>
+      <Text style={{ color: color || 'black', fontSize: 13, textDecorationLine: 'none', margin: 10 , fontWeight: 'bold'}}>
         {name}
       </Text>
     </TouchableOpacity>
