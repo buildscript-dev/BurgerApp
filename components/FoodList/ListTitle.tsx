@@ -4,14 +4,13 @@ import { Text, TouchableOpacity } from 'react-native';
 type FoodParam = {
   name: string;
   color?: string;
-//   handlePress: () => void; // ✅ This should be a function, not a string
+  handlePress: () => void
 };
 
-const FoodTab: React.FC<FoodParam> = ({ name, color
-    // handlePress 
+const FoodTab: React.FC<FoodParam> = ({ name, color, handlePress 
 }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={handlePress}>
       <Text style={{ color: color || 'black', fontSize: 13, textDecorationLine: 'none', margin: 10 , fontWeight: 'bold'}}>
         {name}
       </Text>

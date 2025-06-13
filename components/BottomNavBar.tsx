@@ -11,6 +11,5 @@ const MyTabs = createBottomTabNavigator({
         Profile: ProfilePage,
         Notification: Notificaiton,
         Cart: CartPage
-        
     }
 });
